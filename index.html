@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E=mc² Universe Explorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- GitHub Corner Ribbon -->
+    <a href="https://github.com/tandekaenock/einstein-emc2-explorer" 
+       class="github-corner" 
+       aria-label="View source on GitHub"
+       target="_blank"
+       rel="noopener noreferrer">
+        <svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true">
+            <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+            <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" class="octo-arm"></path>
+            <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+        </svg>
+    </a>
+
+    <div class="container">
+        <header>
+            <h1 class="title">E=mc² Universe Explorer</h1>
+            <div class="formula">E = m × c²</div>
+            <p class="subtitle">Explore the most famous equation in physics. Discover how mass and energy are two sides of the same coin, and visualize the incredible energy locked within ordinary matter.</p>
+        </header>
+        
+        <div class="toggle-switch">
+            <button class="toggle-btn active" id="massToEnergyBtn">
+                <i class="fas fa-weight-hanging"></i> Mass → Energy
+            </button>
+            <button class="toggle-btn" id="energyToMassBtn">
+                <i class="fas fa-bolt"></i> Energy → Mass
+            </button>
+        </div>
+        
+        <div class="main-content">
+            <div class="calculator-card">
+                <h2 class="card-title"><i class="fas fa-calculator"></i> Einstein's Calculator</h2>
+                
+                <div class="input-group" id="massInputGroup">
+                    <label for="massInput">Mass</label>
+                    <input type="number" id="massInput" value="1" step="any" min="0">
+                    <div class="unit-selector">
+                        <div class="unit-btn active" data-unit="kg">Kilograms (kg)</div>
+                        <div class="unit-btn" data-unit="g">Grams (g)</div>
+                        <div class="unit-btn" data-unit="lbs">Pounds (lbs)</div>
+                    </div>
+                </div>
+                
+                <div class="input-group" id="energyInputGroup" style="display: none;">
+                    <label for="energyInput">Energy</label>
+                    <input type="number" id="energyInput" value="1000000" step="any" min="0">
+                    <div class="unit-selector">
+                        <div class="unit-btn active" data-unit="J">Joules (J)</div>
+                        <div class="unit-btn" data-unit="kT">Kiloton TNT</div>
+                        <div class="unit-btn" data-unit="kWh">Kilowatt-hours</div>
+                    </div>
+                </div>
+                
+                <button id="calculateBtn">
+                    <i class="fas fa-bolt"></i> Calculate Conversion
+                </button>
+                
+                <div class="result-box">
+                    <div class="result-title" id="resultTitle">Energy Equivalent</div>
+                    <div class="result-value" id="resultValue">8.987551787 × 10<sup>16</sup> J</div>
+                </div>
+                
+                <div class="info-box">
+                    <div class="info-title"><i class="fas fa-lightbulb"></i> Did You Know?</div>
+                    <p id="funFact">1 kg of mass contains approximately 89,875,517,873,681,764 joules of energy. That's equivalent to the energy released by 21.5 megatons of TNT!</p>
+                </div>
+            </div>
+            
+            <div class="visualization-card">
+                <h2 class="card-title"><i class="fas fa-eye"></i> Energy Visualization</h2>
+                
+                <div class="particle-animation" id="particleAnimation">
+                    <div class="energy-wave" id="energyWave"></div>
+                </div>
+                
+                <div class="comparison-box">
+                    <div class="comparison-title"><i class="fas fa-balance-scale"></i> Real-World Comparisons</div>
+                    <div class="comparison-list" id="comparisonList">
+                        <div class="comparison-item">
+                            <span>Hiroshima atomic bomb</span>
+                            <span>15 kilotons TNT</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span>Annual US electricity consumption</span>
+                            <span>~4 × 10<sup>19</sup> J</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span>1 liter of gasoline</span>
+                            <span>3.2 × 10<sup>7</sup> J</span>
+                        </div>
+                        <div class="comparison-item">
+                            <span>Daily food intake (adult)</span>
+                            <span>~1 × 10<sup>7</sup> J</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label>Compare with:</label>
+                    <select id="comparisonSelector">
+                        <option value="hiroshima">Hiroshima atomic bomb (15 kT TNT)</option>
+                        <option value="tsar">Tsar Bomba (50 MT TNT)</option>
+                        <option value="sun">Sun's daily energy output</option>
+                        <option value="gasoline">1 liter of gasoline</option>
+                        <option value="battery">AA battery</option>
+                        <option value="chocolate">Chocolate bar (250 kcal)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>E=mc² Universe Explorer | c = 299,792,458 m/s</p>
+            <div class="footer-links">
+                <a href="https://github.com/tandekaenock/einstein-emc2-explorer" 
+                   class="github-button" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> View on GitHub
+                </a>
+                <span class="made-with">
+                    Made with <i class="fas fa-heart"></i> to explore physics
+                </span>
+            </div>
+            <p class="note">Note: This tool demonstrates the theoretical energy content. Actual energy release depends on the efficiency of mass-to-energy conversion.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
