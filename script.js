@@ -337,7 +337,7 @@ function updateFunFact() {
     animationInterval = setInterval(() => {
         const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
         funFactElement.textContent = randomFact;
-    }, 10000);
+    }, 20000);
 }
 
 // Add keyboard shortcuts
