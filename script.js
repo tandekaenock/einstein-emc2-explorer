@@ -361,7 +361,7 @@ document.addEventListener('keydown', (e) => {
     // Ctrl+G to open GitHub
     if (e.ctrlKey && e.key === 'g') {
         e.preventDefault();
-        window.open('https://github.com/yourusername/einstein-emc2-explorer', '_blank');
+        window.open('https://github.com/tandekaenock/einstein-emc2-explorer', '_blank');
     }
 });
 
