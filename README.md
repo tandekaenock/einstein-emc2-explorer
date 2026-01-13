@@ -7,7 +7,7 @@
 
 An interactive web application that brings Einstein's most famous equation to life. Explore the profound relationship between mass and energy through real-time calculations, visualizations, and educational comparisons.
 
-🔗 **Live Demo**: [https://tandekaenock.github.io/einstein-emc2-explorer/](https://tandekaenock.github.io/einstein-emc2-explorer/)
+🔗 **Live Demo**: [Einstein-EMC2-Explorer](https://einstein-emc2-explorer.vercel.app/)
 
 ## ✨ Features
 
@@ -35,7 +35,7 @@ An interactive web application that brings Einstein's most famous equation to li
 ## 🚀 Quick Start
 
 ### Option 1: Use Online
-Visit the live demo: [https://yourusername.github.io/einstein-emc2-explorer/](https://yourusername.github.io/einstein-emc2-explorer/)
+Visit the live demo: [Einstein-EMC2-Explorer](https://einstein-emc2-explorer.vercel.app/)
 
 ### Option 2: Run Locally
 ```bash
@@ -217,15 +217,15 @@ copies or substantial portions of the Software.
 
 ## 📬 Contact
 
-Your Name - [@tandekaaa](https://twitter.com/tandekaaa) 
+Your Name - [Tandeka](https://twitter.com/tandekaaa) 
 
-Project Link: [https://github.com/tandekaenock/einstein-emc2-explorer](https://github.com/tandekaenock/einstein-emc2-explorer)
+Project Link: [Einstein-EMC2-Explorer](https://einstein-emc2-explorer.vercel.app/)
 
 ## ⭐ Show Your Support
 
 If you find this project helpful, please give it a star! It helps others discover the tool and encourages further development.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/einstein-emc2-explorer&type=Date)](https://star-history.com/#tandekaenock/einstein-emc2-explorer&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=tandekaenock/einstein-emc2-explorer&type=Date)](https://star-history.com/#tandekaenock/einstein-emc2-explorer&Date)
 
 ---
 
